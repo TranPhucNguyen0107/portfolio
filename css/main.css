@@ -20,9 +20,9 @@ img {
 }
 
 .container{
-    max-width: 1200px;
+    max-width: 2000px;
     width: 100%;
-    margin: 0 auto;
+    margin: auto;
     padding: 0 10px;
 }
 
@@ -60,7 +60,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 10px -10px;
 }
 
 .navbar__logo img{
@@ -183,7 +183,13 @@ header{
     margin-right: 40px;
 }
 
+.navbar__googlemap{
+    margin-top: 30px;
+    margin-left: 52px;
+}
+
 @media (min-width: 62em){
+   
     .navbar__links{
         position: initial;
         transform: translateX(0);
@@ -208,5 +214,91 @@ header{
     .navbar__contactLogos img{
         margin-top: -5px;
     }
+    .container{
+        max-width: 1200px;
+    }
 
+    .navbar__googlemap{
+        margin-top: 0px;
+    }
+
+}
+
+/*banner*/
+
+#banner{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+
+}
+
+.banner__img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.banner__heading{
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--grey);
+}
+
+.banner__heading h1{
+    font-size: 2.25rem;
+    padding-top: 8em;
+    margin-bottom: 0.8em;
+}
+
+.banner__heading p {
+    font-weight: 300;
+    line-height: 2em;
+    margin-bottom: 1.5em;
+}
+
+.banner__btn{
+    font-size: 1rem;
+}
+
+.banner__socials{
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+}
+
+.banner__socials a{
+    color: var(--grey);
+    transition: var(--smooth);
+}
+
+.banner__socials a:hover{
+    color: var(--green-l);
+    transition: var(--smooth);
+}
+
+@media (min-width: 62em) {
+    .banner__heading{
+        text-align: initial;
+        margin: 0;
+        margin-bottom: 400px;
+        padding-top: 0;
+    }
+
+    .banner__socials{
+        justify-content: flex-start;
+    }
+
+    .banner__socials a{
+        margin-right: 45px;
+    }
+
+    .banner__img{
+        width: 60%;
+    }
 }
